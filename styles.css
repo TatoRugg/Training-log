@@ -1,0 +1,167 @@
+/* Reset default browser styles */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+}
+
+/* Box sizing border-box for all elements */
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+/* Set body font, background, and color */
+body {
+    font-family: 'Roboto', sans-serif; /* Aesthetic font */
+    background-color: #f0f0f0; /* Light gray background */
+    color: #333; /* Dark gray text color */
+    line-height: 1.6;
+}
+
+/* Container styles */
+.container {
+    max-width: 800px; /* Reduced maximum width */
+    margin: 0 auto;
+    padding: 20px;
+    position: relative; /* Set container as relative */
+}
+
+/* Heading styles */
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 20px;
+    color: #333; /* Dark gray heading color */
+}
+
+/* Form container */
+#formContainer {
+    display: none; /* Initially hide the form container */
+    background-color: #fff; /* White background for forms */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Soft shadow effect */
+    position: relative;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: transform 0.8s ease-in-out;
+    width: 80%; /* Reduced width */
+    z-index: 1; /* Ensure the form container is above other elements */
+}
+
+/* Slide-in animation for the form container */
+#formContainer.slide-in {
+    transform: translateX(-50%) translateY(0%);
+}
+
+/* Form styles */
+form {
+    margin-bottom: 30px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+input[type="date"],
+input[type="number"],
+select,
+input[type="text"] {
+    width: calc(100% - 22px); /* Adjust width to fit within container */
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 40px; /* Rounded corners */
+    font-size: 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add slight box shadow */
+}
+
+select {
+    cursor: pointer;
+}
+
+/* Button styles */
+button[type="button"] {
+    background-color: #3498db; /* Blue button */
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 40px; /* Rounded corners */
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.3s; /* Add transition for smoother animation */
+}
+
+button[type="button"]:hover {
+    background-color: #2980b9; /* Darker blue on hover */
+    transform: translateY(-2px); /* Add slight lift effect */
+}
+
+button[type="button"]:focus {
+    outline: none;
+}
+
+/* Additional styles for specific elements */
+/* Styling for different types of text */
+.error-message {
+    color: #e74c3c; /* Red for error messages */
+    font-size: 14px;
+}
+
+.success-message {
+    color: #2ecc71; /* Green for success messages */
+    font-size: 14px;
+}
+
+.info-message {
+    color: #3498db; /* Blue for informational messages */
+    font-size: 14px;
+}
+
+/* Background image for the entire page */
+body {
+    background-color: #f0f0f0; /* Light gray background */
+    margin: 0 20px;
+}
+
+/* Alignment of form elements */
+input,
+select,
+button {
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* Center align form elements */
+input[type="date"],
+input[type="number"],
+input[type="text"],
+select {
+    width: calc(100% - 22px); /* Adjust width to fit within container */
+    margin: 0 auto;
+    padding: 10px;
+}
+
+/* Responsive design */
+@media screen and (max-width: 768px) {
+    /* Adjust container padding for smaller screens */
+    .container {
+        padding: 15px;
+    }
+}
+
+/* Add more media queries for further responsiveness */
